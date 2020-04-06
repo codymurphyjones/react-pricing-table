@@ -36,8 +36,6 @@ class PricingSlot extends React.Component {
             buttonText,
             shouldDisplayButton
         } = this.props;
-		
-		
 	
         return (
             <div onMouseOver={this.props.onMouseOver} onMouseEnter={this.props.onMouseEnter} onMouseLeave={this.props.onMouseLeave} className="Grid-cell">
