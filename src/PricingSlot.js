@@ -5,6 +5,9 @@ import PropTypes from "prop-types";
 const propTypes = {
     highlighted: PropTypes.bool,
     onClick: PropTypes.func,
+	onMouseOver: PropTypes.func,
+	onMouseEnter: PropTypes.func,
+	onMouseLeave: PropTypes.func,
     title: PropTypes.string,
     priceText: PropTypes.string,
     buttonClass: PropTypes.string,
@@ -31,11 +34,13 @@ class PricingSlot extends React.Component {
             highlightColor,
             buttonClass,
             buttonText,
-            shouldDisplayButton,
-			...remainingProps
+            shouldDisplayButton
         } = this.props;
+		
+		
+	
         return (
-            <div {...remainingProps} className="Grid-cell">
+            <div onMouseOver={this.props.onMouseOver} onMouseEnter={this.props.onMouseEnter} onMouseLeave={this.props.onMouseLeave} className="Grid-cell">
                 <ul className="price basic-border">
                     <li
                         style={
