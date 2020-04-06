@@ -26,6 +26,7 @@
   "extends": ["eslint:recommended", "plugin:react/recommended"],
 
   "rules": {
+  "no-console": "off",
     // overrides
     "no-multiple-empty-lines": ["error", {"max": 2}]
   }
