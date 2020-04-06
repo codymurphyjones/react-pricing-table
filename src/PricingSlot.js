@@ -31,10 +31,11 @@ class PricingSlot extends React.Component {
             highlightColor,
             buttonClass,
             buttonText,
-            shouldDisplayButton
+            shouldDisplayButton,
+			...remainingProps
         } = this.props;
         return (
-            <div className="Grid-cell">
+            <div {...remainingProps} className="Grid-cell">
                 <ul className="price basic-border">
                     <li
                         style={
